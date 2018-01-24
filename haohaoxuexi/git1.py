@@ -273,7 +273,7 @@ __author__ = 'asus'
 # git branch --set-upstream develop origin/develop
 
 # 更新GitHub上面的库
-# sst -T git@github.com
+# ssh -T git@github.com
 # git add *
 # git commit -m "更新说明"
 # git pull
