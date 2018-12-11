@@ -18,5 +18,5 @@ if name.endswith('gumby'):
         print('hello,gumby')
 else :
     print('hello,stringer')
-              
+print()              
               
