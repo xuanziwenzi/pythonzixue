@@ -278,3 +278,13 @@ __author__ = 'asus'
 # git commit -m "更新说明"
 # git pull
 # git push origin master
+
+# 在Windows下使用Git Bash，用的是Linux命令，常用几个文件操作命令如下：
+# Windows命令	    Linux命令	      意义
+# cd e:\xxx	        cd /e/xxx	      切换到xxx目录
+# cd	            pwd	              显示当前目录路径
+# dir	            ls	              列出当前目录内容
+# copy nul xxx.txt	touch xxx.txt	  生成名为xxx.txt的空文件
+# del xxx.txt	    rm xxx.txt	      删除xxx.txt文件
+# md xxx	        mkdir xxx	      建立xxx目录
+# rd /s xxx	        rm -r xxx         删除xxx目录
