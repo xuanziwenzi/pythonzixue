@@ -1,4 +1,32 @@
 #git学习
+#ssh -T git@github.com
+#git config --global user.name "your name"
+#git config --global user.email "your_email@youremail.com"
+#提交上传
+# 1）接下来在本地仓库里添加一些文件，比如README
+#
+# 在本地新建一个README文件
+#
+# 然后在命令行输入一下命令
+#
+# $ git add README
+#
+# $ git commit -m "first commit"
+# 我的执行界面如下
+#
+# 2）上传到github
+#
+# $ git push origin master
+# git push命令会将本地仓库推送到远程服务器。
+#
+# git pull命令则相反。
+#
+# 注：首次提交，先git pull下，修改完代码后，使用git status可以查看文件的差别，使用git add 添加要commit的文件。
+#
+# 大功告成，现在你知道如何将本地的项目提交到github上了。
+
+
+
 fatal: pathspec 'readme.txt' did not match any files 解决办法
 
 Git中用，git init 创建好仓库后，目录就会多了 .git 的目录，它里面放了 Git 所需要的一些文件，先忽略。
@@ -59,3 +87,4 @@ How to resolve git's “not something we can merge” error
 來源：简书'''
 
 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+
