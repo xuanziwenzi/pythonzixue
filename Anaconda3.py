@@ -203,3 +203,95 @@ conda remove --name python34 --all
 方法有二：1. 显式地给出conda的绝对地址
           2. 在python34环境中也安装conda工具（推荐）。
 
+
+
+
+Tensorflow的安装
+cmd下，pip install tensorflow
+会提示一个找不到对应版本的信息，可能时它自己找不到TensorFlow版本支持Python3.7的版本，
+但是支持python3.6的，降回到低版本太麻烦了，于是找了一下解决方案。
+在此链接可以找到Tensorflow支持Python3.7的一个whl：link.
+
+这里说要求numpy+mkl和protobuf的site-package，因为我的Anaconda中已经有了，
+所以没在意这个，如果没有的话就在cmd中pip install一下。
+下载tensorflow‑1.9.0‑cp37‑cp37m‑win_amd64.whl，记住下载完成后的路径，
+比如C:\Users\usename\Downloads\tensorflow-1.9.0-cp37-cp37m-win_amd64.whl
+
+接下来安装：
+cmd下，进入刚才下载文件的路径下 cd C:\Users\usename\Downloads
+然后pip install tensorflow-1.9.0-cp37-cp37m-win_amd64.whl
+最后等待安装完成，就可以在C:\Ruanjian\Anaconda3\Lib\site-packages中看到一个tensorflow的文件夹啦
+，这就意味着，在python中import tensorflow as tf 的时候不会再出现no module named tensorflow的error了
+测试一下，在python中导入tensorflow
+
+improt tensorflow as tf
+h = tf.constant('hello,tensorflow')
+s = tf.Session()
+print(s.run())
+
+--------------------- 
+作者：小小小六儿 
+来源：CSDN 
+原文：https://blog.csdn.net/weixin_38283428/article/details/84201733 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+
+
+安装anaconda后使用pip安装tensorflow找不到包会报如下错误
+
+C:\Users\Z.Y>pip install tensorflow
+Collecting tensorflow
+  Could not find a version that satisfies the requirement tensorflow (from versions: )
+No matching distribution found for tensorflow
+
+为什么找不到呢？
+
+因为为tensorflow只支持python3.5版本的，不支持3.6的
+而官网最新下载的就是3.6版本的，真是超级坑的
+
+注意那个大大的only
+所以说，仔细看官方文档是多么重要。
+C:\Users\Z.Y>python --version
+Python 3.6.0 :: Anaconda 4.3.0 (64-bit)
+
+所以需要使用conda 配置python3.5的环境！
+具体使用方法，自行google
+在cmd中
+conda create --name python35 python=3.5
+
+创建python3.5的环境
+下面就可以愉快的使用
+pip install tensorflow-gpu
+
+与conda类似的Docker，也要好好研究，真是神奇一样的存在。
+
+作者：zyfortirude
+链接：https://www.jianshu.com/p/acad99d379c6
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+
+
+
+
+
+比如我们想要执行桌面的test.py文件，直接输入如下语法即可得到执行结果：
+
+python C:\Users\Administrator\Desktop\test.py
+1
+但是，输入这一长串的路径显得很麻烦，有没有更简单的做法呢？
+
+我们可以直接将该文件用鼠标拖到CMD框中，即可获得该文件的绝对路径。
+
+这样就可以实现快速执行python文件了。
+--------------------- 
+作者：geerniya 
+来源：CSDN 
+原文：https://blog.csdn.net/geerniya/article/details/79907945 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+
+
+解决方法：1）卸载keras：pip uninstall keras
+2）安装2.0.8版本的keras：pip install keras==2.0.8 
