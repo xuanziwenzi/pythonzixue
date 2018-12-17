@@ -8,6 +8,12 @@ cnnda info -e
 * 表示当前所处的环境
 base 表示默认的环境
 
+deactivate
+退出环境
+
+
+
+
 conda env remove -n env_name
 删除指定环境
 conda env remove -n env_name --all
@@ -295,3 +301,46 @@ python C:\Users\Administrator\Desktop\test.py
 
 解决方法：1）卸载keras：pip uninstall keras
 2）安装2.0.8版本的keras：pip install keras==2.0.8 
+
+
+
+
+要在pycharm下使用tensorflow，要设置好pycharm下解释器interpreter的路径，这里也就是tensorflow的路径。
+
+
+
+如果是虚拟的env，或anaconda的env，那就在interpreter路径里添加对应Python bin。
+
+
+
+如果当前路径里没有解释器没有这个，就点击右侧add local在电脑里找。
+
+anaconda2--->envs--->tensorflow---->bin---->python2.7（或者Python3.5，用哪个选哪个）
+
+
+
+后来我自己又装的时候，不知道怎么的tensorflow的env建在了一个叫  .conda/envs/tensorflow的路径下面，
+并且这个.conda文件夹是不可见的，但是可以在pycharm里面导入，也可以用。
+
+这里面原因我不太懂，要是有懂的朋友希望可以指点我一下。
+
+更新：这个问题是由于建立tensorflow 虚拟环境的时候，当前路径是在home目录下，cd到anaconda/envs目录就可以了。
+
+
+
+这里有个找路径的方便方法：
+
+打开terminal,输入指令
+
+$source activate tensorflow
+
+$which python
+
+就可以出来env下对应的Python在哪里了，然后在pycharm中添加对应的路径。
+--------------------- 
+作者：shadow_walker_t 
+来源：CSDN 
+原文：https://blog.csdn.net/seymour163/article/details/52904828 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
