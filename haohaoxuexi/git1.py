@@ -288,3 +288,4 @@ __author__ = 'asus'
 # del xxx.txt	    rm xxx.txt	      删除xxx.txt文件
 # md xxx	        mkdir xxx	      建立xxx目录
 # rd /s xxx	        rm -r xxx         删除xxx目录
+#                    cat              显示文件内容

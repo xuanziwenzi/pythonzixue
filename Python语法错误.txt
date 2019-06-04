@@ -1,0 +1,18 @@
+python3读取文件出现：
+
+SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 2-3: malformed \N character escape
+
+?
+
+
+解决办法：
+
+文件路径采用linux方式（“\”改成“/”）：
+
+
+'D:/NeoDoc/专利/文本识别/ChemName.txt'
+--------------------- 
+作者：ustc_ice 
+来源：CSDN 
+原文：https://blog.csdn.net/ustc_ice/article/details/89451272 
+版权声明：本文为博主原创文章，转载请附上博文链接！
